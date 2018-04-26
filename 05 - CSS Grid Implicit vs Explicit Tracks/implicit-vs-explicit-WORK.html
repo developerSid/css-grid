@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>CSS Grid Implicit vs Explicit Grid Tracks!</title>
+</head>
+
+<body>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
+
+<div class="container2">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+  <div class="item">5</div> <!-- row is started here for 5 and 6 which is implicit -->
+  <div class="item">6</div> <!-- columns are already defined so it overflows with that unless configured with grid-auto-rows -->
+  <div class="item">7</div>
+  <div class="item">8</div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 400px; /*defines explicit grid with 2 columns causes items to wrap*/
+  }
+
+  .container2 {
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 400px; /*define an explicit grid column of 2 columns*/
+    grid-template-rows: 50px 100px; /*define an explicit grid of rows of 2 rows*/
+    grid-auto-rows: 300px; /* describes what happens to rows beyond those defined ^^ (above) */
+  }
+</style>
+</body>
+
+</html>

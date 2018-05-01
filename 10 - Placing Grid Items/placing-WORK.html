@@ -145,6 +145,52 @@
     <div class="item itemd30">30</div>
   </div>
 
+  <div class="container5">
+    <div class="item iteme1">1</div>
+    <div class="item iteme2">2</div>
+    <div class="item iteme3">3</div>
+    <div class="item iteme4">4</div>
+    <div class="item iteme5">5</div>
+    <div class="item iteme6">6</div>
+    <div class="item iteme7">7</div>
+    <div class="item iteme8">8</div>
+    <div class="item poope">💩</div>
+    <div class="item iteme9">9</div>
+    <div class="item iteme10">10</div>
+    <div class="item iteme11">11</div>
+    <div class="item iteme12">12</div>
+    <div class="item iteme13">13</div>
+    <div class="item iteme14">14</div>
+    <div class="item iteme15">15</div>
+    <div class="item iteme16">16</div>
+    <div class="item iteme17">17</div>
+    <div class="item iteme18">18</div>
+    <div class="item iteme19">19</div>
+    <div class="item iteme20">20</div>
+    <div class="item iteme21">21</div>
+    <div class="item iteme22">22</div>
+    <div class="item iteme23">23</div>
+    <div class="item iteme24">24</div>
+    <div class="item iteme25">25</div>
+    <div class="item iteme26">26</div>
+    <div class="item iteme27">27</div>
+    <div class="item iteme28">28</div>
+    <div class="item iteme29">29</div>
+    <div class="item iteme30">30</div>
+  </div>
+
+  <div class="container6">
+    <div class="item itemf1">1</div>
+    <div class="item itemf2">2</div>
+    <div class="item itemf3">3</div>
+    <div class="item itemf4">4</div>
+    <div class="item itemf5">5</div>
+    <div class="item itemf6">6</div>
+    <div class="item itemf7">7</div>
+    <div class="item itemf8">8</div>
+    <div class="item poopf">💩</div>
+  </div>
+
   <style>
     .container {
       display: grid;
@@ -192,6 +238,34 @@
     .poopd {
       background: #BADA55;
       grid-column: 1 / -1; /*Can be used as a span 100%*/
+    }
+
+    .container5 {
+      margin-top: 50px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .poope {
+      background: #BADA55;
+      grid-column: 1 / -4;
+      grid-row: 3 / span 3;
+    }
+
+    .container6 {
+      margin-top: 50px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+    }
+
+    .poopf {
+      background: #BADA55;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      /* combining the upper two css configs causes the poop item to consume the entire grid */
     }
   </style>
 </body>
